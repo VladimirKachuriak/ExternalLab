@@ -1,5 +1,7 @@
 package org.example.ukrflix.service;
 
+import org.apache.log4j.Logger;
+import org.example.ukrflix.controller.ActorController;
 import org.example.ukrflix.models.Film;
 import org.example.ukrflix.models.Purchase;
 import org.example.ukrflix.models.User;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PurchaseService {
+    private static final Logger LOGGER = Logger.getLogger(PurchaseService.class);
     private final PurchaseRepo purchaseRepo;
     private final UserRepo userRepo;
     private final FilmRepo filmRepo;

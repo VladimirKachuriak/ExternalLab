@@ -1,5 +1,6 @@
 package org.example.ukrflix.controller;
 
+import org.apache.log4j.Logger;
 import org.example.ukrflix.models.User;
 import org.example.ukrflix.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
+    private static final Logger LOGGER = Logger.getLogger(LoginController.class);
     private final UserService userService;
 
     @Autowired
@@ -22,6 +24,7 @@ public class LoginController {
     }
     @GetMapping("/login")
     public String loginPage(){
+        LOGGER.info("Entered /login");
         return "login";
     }
     @PostMapping("/login")
@@ -29,16 +32,19 @@ public class LoginController {
                              HttpServletRequest request, RedirectAttributes redirectAttributes){
         User user = userService.findByLogin(login);
         if(user ==null){
-            redirectAttributes.addFlashAttribute("message","no such user exists");
+            redirectAttributes.addFlashAttribute("message","label.warning.incorrectLogin");
+            LOGGER.debug("user entered incorrect login");
             return "redirect:/login";
         }
         if(!user.getPassword().equals(password)){
-            redirectAttributes.addFlashAttribute("message","incorrect password");
+            redirectAttributes.addFlashAttribute("message","label.warning.incorrectPassword");
+            LOGGER.debug("user entered incorrect password");
             return "redirect:/login";
         }
         HttpSession session = request.getSession();
         session.setAttribute("login",login);
-        redirectAttributes.addFlashAttribute("message","registration completed successfully");
+        redirectAttributes.addFlashAttribute("message","label.message.loginSuccess");
+        LOGGER.info("user was logged successfully");
         return "redirect:/catalog";
     }
 }

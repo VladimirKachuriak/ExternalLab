@@ -1,0 +1,494 @@
+2023-04-23 17:51:41 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 17:53:08 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 17:53:59 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 17:54:59 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 17:55:17 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 17:58:35 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 17:59:10 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 18:01:29 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 18:02:22 DEBUG [main]: - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2023-04-23 18:02:28 INFO  [http-nio-8080-exec-2]: - Redirect from / to the /catalog path
+2023-04-23 18:02:28 INFO  [http-nio-8080-exec-1]: - Redirect from / to the /catalog path
+2023-04-23 18:02:28 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-23 18:02:39 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-23 18:02:40 INFO  [http-nio-8080-exec-6]: - Entered /registration
+2023-04-23 18:13:59 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-23 18:14:31 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-23 18:20:36 INFO  [http-nio-8080-exec-1]: - Entered /login
+2023-04-23 18:20:36 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-23 18:20:41 INFO  [http-nio-8080-exec-4]: - Entered /user/profile
+2023-04-23 18:20:41 INFO  [http-nio-8080-exec-4]: - find user by login = null
+2023-04-23 18:22:29 INFO  [http-nio-8080-exec-3]: - Entered /user/profile
+2023-04-23 18:22:29 INFO  [http-nio-8080-exec-3]: - find user by login = null
+2023-04-23 18:23:19 INFO  [http-nio-8080-exec-1]: - Entered /login
+2023-04-23 18:23:24 INFO  [http-nio-8080-exec-2]: - find user by login = user
+2023-04-23 18:23:25 INFO  [http-nio-8080-exec-2]: - user was logged successfully
+2023-04-23 18:23:25 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-23 18:23:26 INFO  [http-nio-8080-exec-5]: - Entered /user/profile
+2023-04-23 18:23:26 INFO  [http-nio-8080-exec-5]: - find user by login = user
+2023-04-23 18:27:33 INFO  [http-nio-8080-exec-2]: - Entered /login
+2023-04-23 18:27:40 INFO  [http-nio-8080-exec-5]: - find user by login = user
+2023-04-23 18:27:40 INFO  [http-nio-8080-exec-5]: - user was logged successfully
+2023-04-23 18:27:40 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-23 18:27:42 INFO  [http-nio-8080-exec-4]: - Entered /user/profile
+2023-04-23 18:27:42 INFO  [http-nio-8080-exec-4]: - find user by login = user
+2023-04-23 18:27:48 INFO  [http-nio-8080-exec-3]: - Entered /user/purchases
+2023-04-23 18:27:48 INFO  [http-nio-8080-exec-3]: - find user by login = user
+2023-04-23 18:27:51 INFO  [http-nio-8080-exec-6]: - Enter /user/top/topUP
+2023-04-23 18:27:51 INFO  [http-nio-8080-exec-6]: - find user by login = user
+2023-04-23 18:28:34 INFO  [http-nio-8080-exec-7]: - Entered /login
+2023-04-23 18:28:38 INFO  [http-nio-8080-exec-8]: - find user by login = user
+2023-04-23 18:28:38 INFO  [http-nio-8080-exec-8]: - user was logged successfully
+2023-04-23 18:28:38 INFO  [http-nio-8080-exec-9]: - Enter /catalog
+2023-04-23 18:28:39 INFO  [http-nio-8080-exec-10]: - Enter /user/top/topUP
+2023-04-23 18:28:39 INFO  [http-nio-8080-exec-10]: - find user by login = user
+2023-04-23 18:30:49 INFO  [http-nio-8080-exec-2]: - Entered /login
+2023-04-23 18:30:54 INFO  [http-nio-8080-exec-1]: - find user by login = user
+2023-04-23 18:30:54 INFO  [http-nio-8080-exec-1]: - user was logged successfully
+2023-04-23 18:30:54 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-23 18:30:56 INFO  [http-nio-8080-exec-5]: - Entered /user/profile
+2023-04-23 18:30:56 INFO  [http-nio-8080-exec-5]: - find user by login = user
+2023-04-23 18:30:58 INFO  [http-nio-8080-exec-6]: - Enter /user/topUP
+2023-04-23 18:30:58 INFO  [http-nio-8080-exec-6]: - find user by login = user
+2023-04-23 18:31:00 INFO  [http-nio-8080-exec-7]: - find user by login = user
+2023-04-23 18:31:01 INFO  [http-nio-8080-exec-7]: - account was replenished successfully, account+=22
+2023-04-23 18:31:01 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-23 18:31:02 INFO  [http-nio-8080-exec-8]: - Entered /user/profile
+2023-04-23 18:31:02 INFO  [http-nio-8080-exec-8]: - find user by login = user
+2023-04-23 18:37:55 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-23 18:38:01 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-23 18:38:03 INFO  [http-nio-8080-exec-4]: - Entered /registration
+2023-04-23 18:39:36 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-23 18:39:42 INFO  [http-nio-8080-exec-1]: - Entered /user/profile
+2023-04-23 18:39:42 INFO  [http-nio-8080-exec-1]: - find user by login = null
+2023-04-23 18:39:46 INFO  [http-nio-8080-exec-4]: - Entered /login
+2023-04-23 18:39:50 INFO  [http-nio-8080-exec-2]: - find user by login = user
+2023-04-23 18:39:50 INFO  [http-nio-8080-exec-2]: - user was logged successfully
+2023-04-23 18:39:50 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-23 18:39:52 INFO  [http-nio-8080-exec-7]: - Entered /user/profile
+2023-04-23 18:39:52 INFO  [http-nio-8080-exec-7]: - find user by login = user
+2023-04-23 18:39:55 INFO  [http-nio-8080-exec-5]: - Entered /user/purchases
+2023-04-23 18:39:55 INFO  [http-nio-8080-exec-5]: - find user by login = user
+2023-04-23 18:39:57 INFO  [http-nio-8080-exec-8]: - Enter /catalog
+2023-04-23 18:44:45 INFO  [http-nio-8080-exec-1]: - Entered /login
+2023-04-23 18:44:48 INFO  [http-nio-8080-exec-6]: - Entered /login
+2023-04-23 18:44:52 INFO  [http-nio-8080-exec-2]: - find user by login = user
+2023-04-23 18:44:53 INFO  [http-nio-8080-exec-2]: - user was logged successfully
+2023-04-23 18:44:53 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-23 18:44:55 INFO  [http-nio-8080-exec-4]: - Entered /user/profile
+2023-04-23 18:44:55 INFO  [http-nio-8080-exec-4]: - find user by login = user
+2023-04-23 18:44:56 INFO  [http-nio-8080-exec-5]: - Entered /user/profile
+2023-04-23 18:44:56 INFO  [http-nio-8080-exec-5]: - find user by login = user
+2023-04-23 18:44:57 INFO  [http-nio-8080-exec-7]: - Entered /user/purchases
+2023-04-23 18:44:57 INFO  [http-nio-8080-exec-7]: - find user by login = user
+2023-04-23 18:44:59 INFO  [http-nio-8080-exec-8]: - Enter /user/topUP
+2023-04-23 18:44:59 INFO  [http-nio-8080-exec-8]: - find user by login = user
+2023-04-23 21:22:45 INFO  [main]: - Entered /registration
+2023-04-23 21:23:36 INFO  [main]: - Entered /registration
+2023-04-23 21:24:04 INFO  [main]: - Entered /registration
+2023-04-23 21:39:23 INFO  [http-nio-8080-exec-2]: - Redirect from / to the /catalog path
+2023-04-23 21:39:23 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-23 21:41:26 INFO  [main]: - Entered /registration
+2023-04-23 21:42:56 INFO  [main]: - Entered /registration
+2023-04-23 21:53:40 INFO  [main]: - Entered /registration
+2023-04-23 22:02:10 INFO  [main]: - Entered /registration
+2023-04-23 22:49:46 INFO  [main]: - Entered /registration
+2023-04-23 22:50:29 INFO  [main]: - Entered /registration
+2023-04-23 22:51:15 INFO  [main]: - Entered /registration
+2023-04-23 22:51:49 INFO  [main]: - Entered /registration
+2023-04-24 09:29:20 INFO  [main]: - Entered /registration
+2023-04-24 09:30:42 INFO  [main]: - Entered /registration
+2023-04-24 09:31:13 INFO  [main]: - Entered /registration
+2023-04-24 09:35:21 INFO  [main]: - Entered /registration
+2023-04-24 09:37:33 INFO  [main]: - find user by login = user5
+2023-04-24 09:38:34 INFO  [main]: - find user by login = user5
+2023-04-24 09:44:58 INFO  [main]: - find user by login = user5
+2023-04-24 09:47:25 INFO  [main]: - find user by login = user5
+2023-04-24 09:47:42 INFO  [main]: - find user by login = user5
+2023-04-24 09:48:21 INFO  [main]: - find user by login = user5
+2023-04-24 09:50:04 INFO  [main]: - Entered /registration
+2023-04-24 09:50:22 INFO  [main]: - Entered /registration
+2023-04-24 10:12:56 INFO  [main]: - Entered /registration
+2023-04-24 10:13:34 INFO  [main]: - Entered /registration
+2023-04-24 10:17:00 INFO  [main]: - Entered /registration
+2023-04-24 10:18:21 INFO  [main]: - Entered /registration
+2023-04-24 10:18:37 INFO  [main]: - Entered /registration
+2023-04-24 10:18:57 INFO  [main]: - Entered /registration
+2023-04-24 10:23:14 INFO  [main]: - Entered /registration
+2023-04-24 11:06:09 INFO  [main]: - Entered /registration
+2023-04-24 11:06:33 INFO  [main]: - Entered /registration
+2023-04-24 11:07:10 INFO  [main]: - Entered /registration
+2023-04-24 11:07:48 INFO  [main]: - find user by login = user5
+2023-04-24 11:12:44 INFO  [main]: - find user by login = user5
+2023-04-24 11:12:45 INFO  [main]: - addedorg.example.ukrflix.models.User@6a97517
+2023-04-24 11:12:45 INFO  [main]: - user was added successfully
+2023-04-24 11:12:45 INFO  [main]: - redirect /login
+2023-04-24 11:22:38 INFO  [main]: - find user by login = user5
+2023-04-24 11:24:06 INFO  [main]: - Entered /registration
+2023-04-24 11:38:35 INFO  [main]: - Entered /registration
+2023-04-24 11:39:34 INFO  [main]: - user was added successfully
+2023-04-24 11:39:34 INFO  [main]: - redirect /login
+2023-04-24 11:39:57 INFO  [main]: - user was added successfully
+2023-04-24 11:39:57 INFO  [main]: - redirect /login
+2023-04-24 11:40:40 INFO  [main]: - Entered /registration
+2023-04-24 11:40:52 INFO  [main]: - user was added successfully
+2023-04-24 11:40:52 INFO  [main]: - redirect /login
+2023-04-24 11:41:37 INFO  [main]: - Entered /registration
+2023-04-24 12:08:02 INFO  [main]: - addedorg.example.ukrflix.models.User@907f2b7
+2023-04-24 12:09:49 INFO  [main]: - find user by login = user
+2023-04-24 12:15:58 INFO  [main]: - update user id:2
+2023-04-24 12:55:26 INFO  [main]: - Entered /registration
+2023-04-24 12:56:25 INFO  [main]: - Entered /registration
+2023-04-24 12:56:46 INFO  [main]: - Entered /registration
+2023-04-24 12:57:04 INFO  [main]: - Entered /registration
+2023-04-24 13:19:07 INFO  [main]: - Entered /registration
+2023-04-24 13:19:59 INFO  [main]: - Entered /registration
+2023-04-24 13:25:48 INFO  [main]: - Entered /registration
+2023-04-24 13:28:34 INFO  [main]: - user was added successfully
+2023-04-24 13:28:34 INFO  [main]: - redirect /login
+2023-04-24 13:29:05 INFO  [main]: - user was added successfully
+2023-04-24 13:29:05 INFO  [main]: - redirect /login
+2023-04-24 13:29:26 INFO  [main]: - Entered /registration
+2023-04-24 13:29:46 INFO  [main]: - Entered /registration
+2023-04-24 13:30:12 INFO  [main]: - Entered /registration
+2023-04-24 19:38:49 INFO  [main]: - Entered /registration
+2023-04-24 19:41:00 INFO  [main]: - user was added successfully
+2023-04-24 19:41:00 INFO  [main]: - redirect /login
+2023-04-24 19:41:48 INFO  [main]: - user was added successfully
+2023-04-24 19:41:48 INFO  [main]: - redirect /login
+2023-04-24 19:42:29 INFO  [main]: - Entered /registration
+2023-04-24 19:42:56 INFO  [main]: - Entered /registration
+2023-04-24 19:50:01 INFO  [main]: - Entered /registration
+2023-04-24 19:51:29 INFO  [main]: - Entered /registration
+2023-04-24 19:52:20 INFO  [main]: - user was added successfully
+2023-04-24 19:52:20 INFO  [main]: - redirect /login
+2023-04-24 20:00:04 INFO  [main]: - Entered /registration
+2023-04-24 20:03:53 INFO  [main]: - Entered /registration
+2023-04-24 20:07:20 INFO  [main]: - user was added successfully
+2023-04-24 20:07:20 INFO  [main]: - redirect /login
+2023-04-24 20:08:38 INFO  [main]: - user was added successfully
+2023-04-24 20:08:38 INFO  [main]: - redirect /login
+2023-04-24 20:09:06 INFO  [main]: - find user by login = user5
+2023-04-24 20:09:06 INFO  [main]: - addedorg.example.ukrflix.models.User@6b94c200
+2023-04-24 20:09:06 INFO  [main]: - user was added successfully
+2023-04-24 20:09:06 INFO  [main]: - redirect /login
+2023-04-24 20:09:25 INFO  [main]: - Entered /registration
+2023-04-24 20:12:06 INFO  [main]: - find user by login = user5
+2023-04-24 20:13:30 INFO  [main]: - Entered /registration
+2023-04-24 20:14:59 INFO  [main]: - Entered /registration
+2023-04-24 20:15:19 INFO  [main]: - find user by login = user5
+2023-04-24 20:17:52 INFO  [main]: - user was added successfully
+2023-04-24 20:17:52 INFO  [main]: - redirect /login
+2023-04-24 23:11:28 INFO  [http-nio-8080-exec-2]: - Redirect from / to the /catalog path
+2023-04-24 23:11:28 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-24 23:11:32 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-24 23:15:36 INFO  [http-nio-8080-exec-1]: - Entered /login
+2023-04-24 23:15:40 INFO  [http-nio-8080-exec-2]: - Entered /login
+2023-04-24 23:15:44 INFO  [http-nio-8080-exec-4]: - find user by login = user
+2023-04-24 23:15:45 INFO  [http-nio-8080-exec-5]: - Entered /login
+2023-04-24 23:16:23 INFO  [http-nio-8080-exec-8]: - find user by login = user
+2023-04-24 23:16:24 INFO  [http-nio-8080-exec-9]: - Entered /login
+2023-04-24 23:16:30 INFO  [http-nio-8080-exec-10]: - Entered /login
+2023-04-24 23:16:32 INFO  [http-nio-8080-exec-3]: - find user by login = 
+2023-04-24 23:16:32 INFO  [http-nio-8080-exec-1]: - Entered /login
+2023-04-24 23:16:36 INFO  [http-nio-8080-exec-2]: - find user by login = user
+2023-04-24 23:16:36 INFO  [http-nio-8080-exec-2]: - user was logged successfully
+2023-04-24 23:16:36 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-24 23:16:44 INFO  [http-nio-8080-exec-5]: - find user by login = user
+2023-04-24 23:16:44 INFO  [http-nio-8080-exec-6]: - Entered /login
+2023-04-24 23:17:12 INFO  [http-nio-8080-exec-1]: - find user by login = user
+2023-04-24 23:17:12 INFO  [http-nio-8080-exec-2]: - Entered /login
+2023-04-25 10:59:17 INFO  [http-nio-8080-exec-1]: - Redirect from / to the /catalog path
+2023-04-25 10:59:17 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-25 10:59:33 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-25 11:02:26 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-25 11:02:30 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-25 11:02:38 INFO  [http-nio-8080-exec-8]: - Entered /user/purchases
+2023-04-25 11:02:38 INFO  [http-nio-8080-exec-8]: - find user by login = null
+2023-04-25 11:02:45 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-25 11:02:56 INFO  [http-nio-8080-exec-9]: - Enter /catalog
+2023-04-25 11:02:57 INFO  [http-nio-8080-exec-10]: - Enter /catalog
+2023-04-25 11:03:01 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-25 11:53:52 INFO  [http-nio-8080-exec-6]: - Redirect from / to the /catalog path
+2023-04-25 11:53:52 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-25 11:56:08 INFO  [http-nio-8080-exec-1]: - Redirect from / to the /catalog path
+2023-04-25 11:56:08 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-25 11:56:11 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-25 11:57:49 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-25 12:00:22 INFO  [http-nio-8080-exec-2]: - Enter /user/topUP
+2023-04-25 12:00:22 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-25 12:00:27 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-25 12:02:43 INFO  [http-nio-8080-exec-8]: - Enter /catalog
+2023-04-25 12:15:58 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-25 23:24:43 INFO  [http-nio-8080-exec-1]: - Redirect from / to the /catalog path
+2023-04-25 23:24:43 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-25 23:32:44 INFO  [http-nio-8080-exec-5]: - Entered /registration
+2023-04-25 23:34:40 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-25 23:58:44 INFO  [http-nio-8080-exec-3]: - deleted successfully
+2023-04-25 23:59:32 INFO  [http-nio-8080-exec-8]: - deleted successfully
+2023-04-25 23:59:38 INFO  [http-nio-8080-exec-10]: - deleted successfully
+2023-04-26 00:00:48 INFO  [http-nio-8080-exec-3]: - deleted successfully
+2023-04-26 09:37:54 INFO  [http-nio-8080-exec-2]: - Entered /login
+2023-04-26 09:38:00 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-26 09:42:01 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-26 10:27:28 INFO  [http-nio-8080-exec-3]: - deleted successfully
+2023-04-26 10:27:35 INFO  [http-nio-8080-exec-8]: - actor id = 1 was added successfully
+2023-04-26 22:11:03 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 22:11:16 INFO  [http-nio-8080-exec-1]: - find user by login = aa
+2023-04-26 22:20:10 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:21:05 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 22:23:57 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:30:28 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:36:41 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 22:36:44 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:37:15 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:38:46 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-26 22:47:24 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:54:03 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 22:54:57 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 23:01:08 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:03:48 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:04:52 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:06:16 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:06:19 INFO  [http-nio-8080-exec-2]: - find user by login = 
+2023-04-26 23:06:24 INFO  [http-nio-8080-exec-3]: - find user by login = 
+2023-04-26 23:07:54 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:08:26 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:08:29 INFO  [http-nio-8080-exec-4]: - find user by login = 
+2023-04-26 23:09:13 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:16:31 INFO  [http-nio-8080-exec-1]: - find user by login = 
+2023-04-26 23:17:54 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 23:18:43 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 23:21:33 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:25:43 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-26 23:25:48 INFO  [http-nio-8080-exec-2]: - find user by login = 
+2023-04-26 23:27:44 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:27:47 INFO  [http-nio-8080-exec-4]: - find user by login = 
+2023-04-26 23:28:27 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-26 23:29:09 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-26 23:29:11 INFO  [http-nio-8080-exec-2]: - find user by login = 
+2023-04-26 23:31:09 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 09:51:47 INFO  [http-nio-8080-exec-5]: - Redirect from / to the /catalog path
+2023-04-27 09:51:47 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-27 09:51:59 INFO  [http-nio-8080-exec-7]: - Entered /registration
+2023-04-27 09:52:44 INFO  [http-nio-8080-exec-1]: - find user by login = 
+2023-04-27 10:05:53 INFO  [http-nio-8080-exec-2]: - Redirect from / to the /catalog path
+2023-04-27 10:05:53 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-27 10:05:59 INFO  [http-nio-8080-exec-6]: - Entered /registration
+2023-04-27 10:06:03 INFO  [http-nio-8080-exec-7]: - find user by login = 
+2023-04-27 10:06:21 INFO  [http-nio-8080-exec-8]: - find user by login = 
+2023-04-27 10:06:25 INFO  [http-nio-8080-exec-9]: - find user by login = 
+2023-04-27 10:06:30 INFO  [http-nio-8080-exec-10]: - find user by login = 
+2023-04-27 10:07:10 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 10:07:13 INFO  [http-nio-8080-exec-2]: - find user by login = 
+2023-04-27 10:08:31 INFO  [http-nio-8080-exec-4]: - Entered /registration
+2023-04-27 10:08:34 INFO  [http-nio-8080-exec-5]: - find user by login = 
+2023-04-27 10:08:48 INFO  [http-nio-8080-exec-6]: - Entered /registration
+2023-04-27 10:09:27 INFO  [http-nio-8080-exec-5]: - find user by login = 
+2023-04-27 10:09:31 INFO  [http-nio-8080-exec-2]: - find user by login = 
+2023-04-27 10:10:51 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 10:10:57 INFO  [http-nio-8080-exec-2]: - find user by login = 
+2023-04-27 10:21:58 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 10:22:03 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-27 10:22:16 INFO  [http-nio-8080-exec-4]: - find user by login = aa
+2023-04-27 10:22:22 INFO  [http-nio-8080-exec-5]: - find user by login = aa
+2023-04-27 10:24:40 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 10:26:21 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 10:26:25 INFO  [http-nio-8080-exec-2]: - Entered /registration
+2023-04-27 10:27:54 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-27 10:28:12 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-27 10:29:53 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-04-27 11:03:26 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-04-27 11:04:28 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-27 11:04:57 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-27 11:07:12 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-27 11:07:20 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-04-27 11:15:38 INFO  [http-nio-8080-exec-3]: - Entered /registration
+2023-04-27 11:15:47 INFO  [http-nio-8080-exec-6]: - Entered /new_film
+2023-04-27 11:15:49 INFO  [http-nio-8080-exec-7]: - Entered /registration
+2023-04-27 11:17:24 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-27 11:17:26 INFO  [http-nio-8080-exec-3]: - Entered /new_film
+2023-04-27 11:17:30 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-04-27 11:17:31 INFO  [http-nio-8080-exec-4]: - Entered /new_film
+2023-04-27 11:19:25 INFO  [http-nio-8080-exec-6]: - Entered /user/purchases
+2023-04-27 11:19:25 INFO  [http-nio-8080-exec-6]: - find user by login = null
+2023-04-27 11:19:31 INFO  [http-nio-8080-exec-7]: - Entered /login
+2023-04-27 11:19:57 INFO  [http-nio-8080-exec-9]: - find user by login = user
+2023-04-27 11:19:57 INFO  [http-nio-8080-exec-9]: - user was logged successfully
+2023-04-27 11:19:57 INFO  [http-nio-8080-exec-10]: - Enter /catalog
+2023-04-27 11:19:59 INFO  [http-nio-8080-exec-1]: - Entered /user/purchases
+2023-04-27 11:19:59 INFO  [http-nio-8080-exec-1]: - find user by login = user
+2023-04-27 11:20:02 INFO  [http-nio-8080-exec-3]: - Entered /user/purchases
+2023-04-27 11:20:02 INFO  [http-nio-8080-exec-3]: - find user by login = user
+2023-04-27 11:20:18 INFO  [http-nio-8080-exec-2]: - Enter /user/topUP
+2023-04-27 11:20:18 INFO  [http-nio-8080-exec-2]: - find user by login = user
+2023-04-27 11:21:53 INFO  [http-nio-8080-exec-2]: - Entered /user/purchases
+2023-04-27 11:21:53 INFO  [http-nio-8080-exec-1]: - Enter /user/topUP
+2023-04-27 11:21:53 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-27 11:21:53 INFO  [http-nio-8080-exec-1]: - find user by login = null
+2023-04-27 11:22:00 INFO  [http-nio-8080-exec-3]: - Entered /login
+2023-04-27 11:22:05 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-27 11:22:08 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-27 11:22:11 INFO  [http-nio-8080-exec-6]: - Entered /login
+2023-04-27 11:22:24 INFO  [http-nio-8080-exec-7]: - find user by login = user
+2023-04-27 11:22:24 INFO  [http-nio-8080-exec-7]: - user was logged successfully
+2023-04-27 11:22:24 INFO  [http-nio-8080-exec-8]: - Enter /catalog
+2023-04-27 11:44:26 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-27 12:24:00 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-27 12:24:09 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-27 12:24:30 INFO  [http-nio-8080-exec-4]: - Enter /user/topUP
+2023-04-27 12:24:30 INFO  [http-nio-8080-exec-4]: - find user by login = null
+2023-04-27 12:24:35 INFO  [http-nio-8080-exec-5]: - Entered /user/purchases
+2023-04-27 12:24:35 INFO  [http-nio-8080-exec-5]: - find user by login = null
+2023-04-27 12:24:37 INFO  [http-nio-8080-exec-2]: - Enter /user/topUP
+2023-04-27 12:24:37 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-27 12:24:38 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-27 12:24:39 INFO  [http-nio-8080-exec-8]: - Enter /user/topUP
+2023-04-27 12:24:39 INFO  [http-nio-8080-exec-8]: - find user by login = null
+2023-04-27 12:24:41 INFO  [http-nio-8080-exec-3]: - Entered /login
+2023-04-27 12:24:45 INFO  [http-nio-8080-exec-10]: - find user by login = user
+2023-04-27 12:24:45 INFO  [http-nio-8080-exec-10]: - user was logged successfully
+2023-04-27 12:24:45 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-27 12:24:45 INFO  [http-nio-8080-exec-6]: - Entered /user/purchases
+2023-04-27 12:24:45 INFO  [http-nio-8080-exec-6]: - find user by login = user
+2023-04-27 12:24:47 INFO  [http-nio-8080-exec-9]: - Enter /user/topUP
+2023-04-27 12:24:47 INFO  [http-nio-8080-exec-9]: - find user by login = user
+2023-04-27 12:24:48 INFO  [http-nio-8080-exec-4]: - Entered /user/purchases
+2023-04-27 12:24:48 INFO  [http-nio-8080-exec-4]: - find user by login = user
+2023-04-27 12:24:49 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-27 12:24:50 INFO  [http-nio-8080-exec-2]: - Entered /user/purchases
+2023-04-27 12:24:50 INFO  [http-nio-8080-exec-2]: - find user by login = user
+2023-04-27 12:24:56 INFO  [http-nio-8080-exec-7]: - Enter /user/topUP
+2023-04-27 12:24:56 INFO  [http-nio-8080-exec-7]: - find user by login = user
+2023-04-27 12:25:00 INFO  [http-nio-8080-exec-8]: - Enter /catalog
+2023-04-27 12:25:03 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-27 12:25:04 INFO  [http-nio-8080-exec-10]: - Enter /catalog
+2023-04-27 12:39:36 INFO  [http-nio-8080-exec-1]: - get all actors
+2023-04-27 12:40:05 INFO  [http-nio-8080-exec-3]: - entered /newActor
+2023-04-27 12:46:18 INFO  [http-nio-8080-exec-1]: - get all actors
+2023-04-27 12:46:20 INFO  [http-nio-8080-exec-4]: - get all actors
+2023-04-27 12:47:02 INFO  [http-nio-8080-exec-1]: - get all actors
+2023-04-27 12:47:06 INFO  [http-nio-8080-exec-2]: - get all actors
+2023-04-27 12:47:16 INFO  [http-nio-8080-exec-4]: - get all actor by id
+2023-04-27 12:47:20 INFO  [http-nio-8080-exec-5]: - get all actor by id
+2023-04-27 22:14:05 INFO  [http-nio-8080-exec-3]: - Redirect from / to the /catalog path
+2023-04-27 22:14:06 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-27 22:14:17 INFO  [http-nio-8080-exec-4]: - deleted successfully
+2023-04-27 22:14:33 INFO  [http-nio-8080-exec-9]: - actor id = 1 was added successfully
+2023-04-27 22:15:55 INFO  [http-nio-8080-exec-2]: - deleted successfully
+2023-04-27 22:16:08 INFO  [http-nio-8080-exec-6]: - actor id = 1 was added successfully
+2023-04-27 22:21:46 INFO  [http-nio-8080-exec-6]: - deleted successfully
+2023-04-27 22:23:06 INFO  [http-nio-8080-exec-4]: - actor id = 1 was added successfully
+2023-04-27 22:25:04 INFO  [http-nio-8080-exec-8]: - Entered /login
+2023-04-27 22:25:09 INFO  [http-nio-8080-exec-9]: - find user by login = user
+2023-04-27 22:25:10 INFO  [http-nio-8080-exec-9]: - user was logged successfully
+2023-04-27 22:25:10 INFO  [http-nio-8080-exec-10]: - Enter /catalog
+2023-04-27 22:25:12 INFO  [http-nio-8080-exec-1]: - Entered /user/purchases
+2023-04-27 22:25:12 INFO  [http-nio-8080-exec-1]: - find user by login = user
+2023-04-28 09:00:29 INFO  [http-nio-8080-exec-2]: - Redirect from / to the /catalog path
+2023-04-28 09:00:29 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-28 09:01:41 INFO  [http-nio-8080-exec-3]: - Entered /new_film
+2023-04-28 09:03:59 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:08:05 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:08:36 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:39:11 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-04-28 09:39:17 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:42:24 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-04-28 09:43:16 INFO  [http-nio-8080-exec-5]: - entered /newActor
+2023-04-28 09:45:06 INFO  [http-nio-8080-exec-3]: - entered /newActor
+2023-04-28 09:45:12 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-28 09:45:35 INFO  [http-nio-8080-exec-8]: - Entered /new_film
+2023-04-28 09:50:40 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:51:55 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:56:44 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 09:57:34 INFO  [http-nio-8080-exec-4]: - entered /newActor
+2023-04-28 10:00:30 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-04-28 10:04:12 INFO  [http-nio-8080-exec-5]: - Film aa was added
+2023-04-28 10:04:12 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-28 10:13:41 INFO  [http-nio-8080-exec-1]: - Film aa was added
+2023-04-28 10:13:41 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 10:14:41 INFO  [http-nio-8080-exec-5]: - Film ÑÑ was added
+2023-04-28 10:14:41 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-28 10:15:46 INFO  [http-nio-8080-exec-8]: - Film ÑÑ was added
+2023-04-28 10:15:46 INFO  [http-nio-8080-exec-9]: - Enter /catalog
+2023-04-28 10:18:45 INFO  [http-nio-8080-exec-1]: - Film ÑÑ was added
+2023-04-28 10:18:45 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 10:19:15 INFO  [http-nio-8080-exec-3]: - Entered /new_film
+2023-04-28 10:26:19 INFO  [http-nio-8080-exec-1]: - entered /newActor
+2023-04-28 10:31:46 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-28 10:35:04 INFO  [http-nio-8080-exec-7]: - entered /newActor
+2023-04-28 10:40:57 INFO  [http-nio-8080-exec-1]: - entered /newActor
+2023-04-28 10:53:52 INFO  [http-nio-8080-exec-1]: - entered /newActor
+2023-04-28 11:00:53 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 11:00:53 INFO  [http-nio-8080-exec-1]: - Entered /registration
+2023-04-28 11:01:41 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 11:01:44 INFO  [http-nio-8080-exec-5]: - Entered /user/purchases
+2023-04-28 11:01:44 INFO  [http-nio-8080-exec-5]: - find user by login = null
+2023-04-28 11:04:50 INFO  [http-nio-8080-exec-2]: - Entered /user/purchases
+2023-04-28 11:04:50 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-28 11:06:23 INFO  [http-nio-8080-exec-1]: - Entered /user/purchases
+2023-04-28 11:06:23 INFO  [http-nio-8080-exec-1]: - find user by login = null
+2023-04-28 11:09:18 INFO  [http-nio-8080-exec-1]: - Entered /user/purchases
+2023-04-28 11:09:18 INFO  [http-nio-8080-exec-1]: - find user by login = null
+2023-04-28 11:11:10 INFO  [http-nio-8080-exec-2]: - Entered /user/purchases
+2023-04-28 11:11:10 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-28 11:11:15 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-28 11:34:05 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-04-28 11:34:07 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-28 11:34:08 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-28 11:34:10 INFO  [http-nio-8080-exec-8]: - Enter /catalog
+2023-04-28 11:34:53 INFO  [main]: - Entered /registration
+2023-04-28 12:14:42 INFO  [main]: - addedorg.example.ukrflix.models.User@2234078
+2023-04-28 12:14:42 INFO  [main]: - update user id:2
+2023-04-28 12:14:42 INFO  [main]: - find user by login = user
+2023-04-28 12:29:10 INFO  [main]: - addedorg.example.ukrflix.models.User@779de014
+2023-04-28 12:29:10 INFO  [main]: - update user id:2
+2023-04-28 12:29:10 INFO  [main]: - find user by login = user
+2023-04-28 12:33:12 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 12:33:12 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-28 12:33:23 INFO  [http-nio-8080-exec-3]: - Entered /user/purchases
+2023-04-28 12:33:23 INFO  [http-nio-8080-exec-3]: - find user by login = null
+2023-04-28 12:33:23 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-28 12:33:26 INFO  [http-nio-8080-exec-5]: - Enter /user/topUP
+2023-04-28 12:33:26 INFO  [http-nio-8080-exec-5]: - find user by login = null
+2023-04-28 12:33:28 INFO  [http-nio-8080-exec-6]: - Entered /user/purchases
+2023-04-28 12:33:28 INFO  [http-nio-8080-exec-6]: - find user by login = null
+2023-04-28 12:33:28 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-28 12:33:29 INFO  [http-nio-8080-exec-8]: - Entered /user/purchases
+2023-04-28 12:33:29 INFO  [http-nio-8080-exec-8]: - find user by login = null
+2023-04-28 12:33:29 INFO  [http-nio-8080-exec-9]: - Enter /catalog
+2023-04-28 12:33:32 INFO  [http-nio-8080-exec-10]: - Entered /user/purchases
+2023-04-28 12:33:32 INFO  [http-nio-8080-exec-10]: - find user by login = null
+2023-04-28 12:33:32 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-28 12:33:32 INFO  [http-nio-8080-exec-2]: - Entered /user/purchases
+2023-04-28 12:33:32 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-28 12:33:32 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-04-28 12:34:30 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-28 12:34:33 INFO  [http-nio-8080-exec-2]: - Entered /user/purchases
+2023-04-28 12:34:33 INFO  [http-nio-8080-exec-2]: - find user by login = null
+2023-04-28 12:34:33 INFO  [http-nio-8080-exec-3]: - Entered /login
+2023-04-28 12:34:35 INFO  [http-nio-8080-exec-4]: - Enter /user/topUP
+2023-04-28 12:34:35 INFO  [http-nio-8080-exec-4]: - find user by login = null
+2023-04-28 12:34:35 INFO  [http-nio-8080-exec-7]: - Entered /login
+2023-04-28 12:34:36 INFO  [http-nio-8080-exec-8]: - Entered /user/profile
+2023-04-28 12:34:36 INFO  [http-nio-8080-exec-8]: - find user by login = null
+2023-04-28 12:35:34 INFO  [http-nio-8080-exec-1]: - Redirect from / to the /catalog path
+2023-04-28 12:35:34 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 12:35:37 INFO  [http-nio-8080-exec-3]: - Enter /user/topUP
+2023-04-28 12:35:37 INFO  [http-nio-8080-exec-3]: - find user by login = null
+2023-04-28 12:35:37 INFO  [http-nio-8080-exec-4]: - Entered /login
+2023-04-28 12:38:13 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-28 12:38:17 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-28 12:41:36 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-28 12:42:17 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-04-28 12:42:19 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-04-28 12:43:46 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-04-28 12:44:38 INFO  [http-nio-8080-exec-6]: - Enter /catalog
+2023-04-28 12:44:41 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-04-28 12:44:42 INFO  [http-nio-8080-exec-8]: - Enter /catalog
+2023-04-28 12:44:55 INFO  [http-nio-8080-exec-9]: - Enter /catalog
+2023-04-28 12:44:58 INFO  [http-nio-8080-exec-10]: - Enter /catalog
+2023-04-28 12:51:40 INFO  [http-nio-8080-exec-2]: - entered /newActor
+2023-04-28 12:51:44 INFO  [http-nio-8080-exec-3]: - entered /newActor
+2023-04-28 12:52:09 INFO  [http-nio-8080-exec-4]: - Entered /new_film
+2023-04-28 12:53:27 INFO  [http-nio-8080-exec-9]: - Enter /catalog
