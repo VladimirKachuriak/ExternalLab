@@ -5,8 +5,10 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.sql.Date;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 public class User {
@@ -18,18 +20,25 @@ public class User {
     @NotBlank
     private String password;
     @NotBlank
+    @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$",message = "{label.warning.name}")
     private String firstname;
     @NotBlank
+    @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$",message = "{label.warning.name}")
     private String lastname;
     private String email;
-    private String phone_num;
+    @Pattern(regexp = "^\\+\\d{6,10}$",message = "{label.warning.incorrectPhone}")
+    private String phone;
     @NotNull
     private Date birthday;
     private int account;
     //@OneToMany(mappedBy = "user",fetch = FetchType.EAGER,cascade = {CascadeType.DETACH,CascadeType.REFRESH})
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<Purchase> purchases;
-    //private Set<Film> films;
+    private List<Purchase> purchases;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {})
+    @JoinTable(name = "purchase",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "film_id"))
+    private List<Film> films;
 
     public int getId() {
         return id;
@@ -79,12 +88,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPhone_num() {
-        return phone_num;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhone_num(String phone_num) {
-        this.phone_num = phone_num;
+    public void setPhone(String phone_num) {
+        this.phone = phone_num;
     }
 
     public Date getBirthday() {
@@ -103,11 +112,19 @@ public class User {
         this.account = account;
     }
 
-    public Set<Purchase> getPurchases() {
+    public List<Purchase> getPurchases() {
         return purchases;
     }
 
-    public void setPurchases(Set<Purchase> purchases) {
+    public void setPurchases(List<Purchase> purchases) {
         this.purchases = purchases;
+    }
+
+    public List<Film> getFilms() {
+        return films;
+    }
+
+    public void setFilms(List<Film> films) {
+        this.films = films;
     }
 }

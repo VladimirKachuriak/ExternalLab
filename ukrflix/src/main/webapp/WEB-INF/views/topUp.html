@@ -10,16 +10,22 @@
 </head>
 <body>
 <div class="container">
+    <div th:replace="fragments/navBar::navBar"></div>
+    <div th:if="${message!=null}">
+        <div class="alert alert-info">
+            <span th:text="#{${message}}"/>
+        </div>
+    </div>
 
-        <H3 class="fw-normal" th:text="'login: '+ ${user.login}"></H3>
-        <H3 class="fw-normal" th:text="'account: '+ ${user.account}"></H3>
+        <H3 class="fw-normal" th:text="#{label.login}+' : '+${user.login}"></H3>
+        <H3 class="fw-normal" th:text="#{label.account}+' : '+${user.account}"></H3>
 
     <form th:action="@{/user/topUp}" th:method="POST">
         <div class="input-group mb-3">
             <span class="input-group-text">$</span>
             <input type="number" min="0" name="money" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
-            <button type="submit" class="btn btn-primary  btn-md" th:text="topUp"></button>
+            <button type="submit" class="btn btn-primary  btn-md" th:text="#{label.button.topUp}"></button>
         </div>
     </form>
 </div>

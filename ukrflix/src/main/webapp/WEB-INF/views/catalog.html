@@ -16,7 +16,7 @@
     <div th:replace="fragments/navBar::navBar"></div>
     <div th:if="${message!=null}">
         <div class="alert alert-info">
-            <span th:text="${message}"/>
+            <span th:text="#{${message}}"/>
         </div>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -26,9 +26,9 @@
                 <div class="card-body">
                     <h5 class="card-title" th:text="${film.name}">Card title</h5>
                     <h1 class="card-text" th:text="${film.release_date}">Card title</h1>
-                    <h1 class="card-text" th:text="'price = ' + ${film.price}">Card title</h1>
-                    <a th:href="@{/film/{id}(id=${film.id})}" class="btn btn-primary">watch film</a>
-                    <a th:href="@{/film/{id}/buy(id=${film.id})}" class="btn btn-primary">buy</a>
+                    <h1 class="card-text" th:text="#{label.price}+' = ' + ${film.price}">Card title</h1>
+                    <a th:href="@{/film/{id}(id=${film.id})}" class="btn btn-primary" th:text="#{label.description}">description</a>
+                    <a th:href="@{/film/{id}/buy(id=${film.id})}" class="btn btn-primary" th:text="#{label.button.buy}">buy</a>
                     <!--<form th:action="@{/film/{id}/buy(id=${film.id})}" method="POST">
                         <input class="btn btn-primary btn-lg" type="submit" value="Buy"/>
                     </form>-->
@@ -36,6 +36,20 @@
             </div>
         </div>
     </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <div th:if="${films.number>0}">
+                <a class="page-link" th:href="@{/catalog/(page=${films.number-1})}" th:text="#{label.button.prev}"></a>
+            </div>
+            <li th:class="${pageNumber == films.number}?'page-item active' : 'page-item'"
+                th:each="pageNumber:${numbers}">
+                    <a class="page-link" th:href="@{/catalog/(page=${pageNumber})}" th:text="${pageNumber+1}"></a>
+            </li>
+            <div th:if="${films.number<numbers[numbers.length-1]}">
+                <a class="page-link" th:href="@{/catalog(page=${films.number+1})}" th:text="#{label.button.next}"></a>
+            </div>
+        </ul>
+    </nav>
 </div>
 </body>
 </html>

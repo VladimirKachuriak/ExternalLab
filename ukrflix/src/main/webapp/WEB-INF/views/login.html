@@ -13,7 +13,7 @@
     <div th:replace="fragments/navBar::navBar"></div>
     <div th:if="${message!=null}">
         <div class="alert alert-info">
-            <span th:text="${message}"/>
+            <span th:text="#{${message}}"/>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -23,15 +23,15 @@
                 <div class="card-body">
                     <form th:method="POST" th:action="@{/login}">
                         <div class="mb-3">
-                            <label for="login" class="form-label">Username</label>
+                            <label for="login" class="form-label" th:text="#{label.login}">Username</label>
                             <input type="text" class="form-control" id="login"  name="login">
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
+                            <label for="password" class="form-label" th:text="#{label.password}">Password</label>
                             <input type="password" class="form-control" id="password" name="password">
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Sign In</button>
+                            <button type="submit" class="btn btn-primary" th:text="#{label.button.login}">Sign In</button>
                         </div>
                     </form>
                 </div>

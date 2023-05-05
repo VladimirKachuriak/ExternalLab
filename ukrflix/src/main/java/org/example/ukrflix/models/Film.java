@@ -1,11 +1,12 @@
 package org.example.ukrflix.models;
 
 
-import org.springframework.format.annotation.DateTimeFormat;
+import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
+import java.util.List;
 import java.util.Set;
 
 
@@ -14,15 +15,23 @@ public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank
     private String name;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @NotNull
     private Date release_date;
     private int price;
     private String img_src;
     private String yt_src;
+    private String description;
     //@OneToMany(mappedBy = "film", cascade = {CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE})
     @OneToMany(mappedBy = "film", cascade = CascadeType.ALL)
     private Set<Purchase> purchases;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @JoinTable(name = "actorassociation",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id"))
+    private List<Actor> actors;
+
 
     public int getId() {
         return id;
@@ -80,6 +89,20 @@ public class Film {
         this.purchases = purchases;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public List<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
+    }
     @Override
     public String toString() {
         return "Film{" +
