@@ -1,0 +1,4 @@
+org\example\ukrflix\service\FilmService.class
+org\example\ukrflix\service\UserService.class
+org\example\ukrflix\service\PurchaseService.class
+org\example\ukrflix\service\ActorService.class

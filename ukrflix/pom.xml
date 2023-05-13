@@ -7,7 +7,13 @@
     <groupId>org.example</groupId>
     <artifactId>ukrflix</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>ukrflix-service</module>
+        <module>ukrflix-data</module>
+        <module>ukrflix-ui</module>
+        <module>ukrflix-core</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>ukrflix Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
@@ -135,6 +141,11 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.12.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 

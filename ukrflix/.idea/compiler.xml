@@ -6,8 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ukrflix" />
+        <module name="ukrflix-core" />
+        <module name="ukrflix-service" />
+        <module name="ukrflix-data" />
+        <module name="ukrflix-ui" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ukfrlix-service" target="17" />
+      <module name="ukrflix-servicesss" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

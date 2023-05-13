@@ -1,0 +1,10 @@
+org\example\ukrflix\models\Purchase.class
+org\example\ukrflix\repo\ActorAssociationRepo.class
+org\example\ukrflix\repo\PurchaseRepo.class
+org\example\ukrflix\models\User.class
+org\example\ukrflix\repo\ActorRepo.class
+org\example\ukrflix\models\Film.class
+org\example\ukrflix\repo\FilmRepo.class
+org\example\ukrflix\repo\UserRepo.class
+org\example\ukrflix\models\ActorAssociation.class
+org\example\ukrflix\models\Actor.class
