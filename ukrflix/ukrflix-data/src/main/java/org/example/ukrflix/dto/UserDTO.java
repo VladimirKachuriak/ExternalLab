@@ -2,29 +2,39 @@ package org.example.ukrflix.dto;
 
 import org.example.ukrflix.model.User;
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import java.sql.Date;
+import java.time.LocalDate;
+
 
 public class UserDTO {
     @NotBlank
     private String login;
+
     @NotBlank
     private String password;
+
     @NotBlank
     private String passwordRepeat;
+
     @NotBlank
     @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$", message = "{label.warning.name}")
     private String firstname;
+
     @NotBlank
     @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$", message = "{label.warning.name}")
     private String lastname;
+
     private String email;
+
     @Pattern(regexp = "^\\+\\d{6,10}$", message = "{label.warning.incorrectPhone}")
     private String phone;
+
     @NotNull
-    private Date birthday;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate birthday;
 
     public String getLogin() {
         return login;
@@ -82,11 +92,11 @@ public class UserDTO {
         this.phone = phone;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

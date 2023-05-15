@@ -3,18 +3,14 @@ package org.example.ukrflix.utils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
+@Component
 public class ThymeleafHelper {
-    private static ThymeleafHelper thymeleafHelper;
-
-    public static ThymeleafHelper getInstance() {
-        if (thymeleafHelper == null) {
-            thymeleafHelper = new ThymeleafHelper();
-        }
-        return thymeleafHelper;
-    }
+    private static final Logger LOGGER = Logger.getLogger(ThymeleafHelper.class);
 
     public String readJsonFile(String jsonDescriptions, String locale) {
         ObjectMapper mapper = new ObjectMapper();
@@ -23,9 +19,11 @@ public class ThymeleafHelper {
             descriptions = mapper.readValue(jsonDescriptions, new TypeReference<Map<String, String>>() {
             });
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            LOGGER.error("we have error", e);
         }
-        if(descriptions==null)return null;
+        if (descriptions == null) {
+            return null;
+        }
         return descriptions.getOrDefault(locale, descriptions.get("en"));
     }
 }

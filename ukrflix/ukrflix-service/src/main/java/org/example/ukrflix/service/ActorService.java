@@ -1,10 +1,7 @@
 package org.example.ukrflix.service;
 
-
 import org.apache.log4j.Logger;
 import org.example.ukrflix.model.Actor;
-
-
 import org.example.ukrflix.repo.ActorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,17 +17,21 @@ public class ActorService {
     public ActorService(ActorRepo actorRepo) {
         this.actorRepo = actorRepo;
     }
-    public boolean addActor(Actor actor){
+
+    public boolean addActor(Actor actor) {
         actorRepo.save(actor);
         return true;
     }
-    public List<Actor> getAll(){
+
+    public List<Actor> getAll() {
         return actorRepo.findAll();
     }
-    public Actor findById(int id){
+
+    public Actor findById(int id) {
         return actorRepo.findById(id).orElse(null);
     }
-    public List<Actor> getActorsNotInFilm(int filmId, String search){
+
+    public List<Actor> getActorsNotInFilm(int filmId, String search) {
         return actorRepo.findActorsByFirstnameOrLastname(search, filmId);
     }
 }

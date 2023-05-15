@@ -19,7 +19,6 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.stream.IntStream;
 
-
 @Controller
 public class UserController {
     private static final Logger LOGGER = Logger.getLogger(UserController.class);
@@ -31,17 +30,21 @@ public class UserController {
         this.userService = userService;
         this.filmService = filmService;
     }
+
     @GetMapping("/catalog")
     public String catalog(Model model, @RequestParam(value = "page", required = false, defaultValue = "1") int page,
                           @RequestParam(value = "size", required = false, defaultValue = "2") int size) {
         LOGGER.info("Enter /catalog");
         Page<Film> filmList = filmService.getAll(page, size);
-        if(page > filmList.getTotalPages())return "redirect:/catalog";
+        if (page > filmList.getTotalPages()) {
+            return "redirect:/catalog";
+        }
         model.addAttribute("numbers", IntStream.range(0, filmList.getTotalPages()).toArray());
         model.addAttribute("size", size);
         model.addAttribute("films", filmList);
         return "catalog";
     }
+
     @GetMapping("/")
     public String catalog() {
         LOGGER.info("Redirect from / to the /catalog path");
@@ -53,8 +56,9 @@ public class UserController {
         LOGGER.info("Enter /user/topUP");
         String login = (String) session.getAttribute("login");
         User user = userService.findByLogin(login);
-        if(user == null)return "redirect:/login";
-        //System.out.println(user.getFilms());
+        if (user == null) {
+            return "redirect:/login";
+        }
         model.addAttribute("user", user);
         return "topUp";
     }
@@ -64,10 +68,11 @@ public class UserController {
         LOGGER.info("Entered /user/purchases");
         String login = (String) session.getAttribute("login");
         User user = userService.findByLogin(login);
-        if(user == null)return "redirect:/login";
+        if (user == null) {
+            return "redirect:/login";
+        }
         List<Purchase> filmList = user.getPurchases();
         model.addAttribute("purchases", filmList);
-        //System.out.println(filmList);
         return "userPurchases";
     }
 
@@ -75,23 +80,28 @@ public class UserController {
     public String topUp(@RequestParam("money") int cash, HttpSession session, RedirectAttributes redirectAttributes) {
         String login = (String) session.getAttribute("login");
         User user = userService.findByLogin(login);
-        if(user == null)return "redirect:/login";
+        if (user == null) {
+            return "redirect:/login";
+        }
         boolean result = userService.topUpAccount(user.getId(), cash);
         if (result) {
             redirectAttributes.addFlashAttribute("message", "label.message.topUpAccount");
-            LOGGER.info("account was replenished successfully, account+="+cash);
+            LOGGER.info("account was replenished successfully, account+=" + cash);
         } else {
             redirectAttributes.addFlashAttribute("message", "label.message.notEnoughMoney");
             LOGGER.info("this user doesn't exist");
         }
         return "redirect:/catalog";
     }
+
     @GetMapping("/user/profile")
     public String profile(Model model, HttpSession session) {
         LOGGER.info("Entered /user/profile");
         String login = (String) session.getAttribute("login");
         User user = userService.findByLogin(login);
-        if(user == null)return "redirect:/login";
+        if (user == null) {
+            return "redirect:/login";
+        }
         model.addAttribute("user", user);
         return "profile";
     }

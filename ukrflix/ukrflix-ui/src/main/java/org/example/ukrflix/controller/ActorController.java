@@ -24,6 +24,7 @@ public class ActorController {
     public ActorController(ActorService actorService) {
         this.actorService = actorService;
     }
+
     @GetMapping("")
     public String getAll(Model model){
         List<Actor> actors = actorService.getAll();
@@ -37,6 +38,7 @@ public class ActorController {
         LOGGER.info("entered /newActor");
         return "newActor";
     }
+
     @PostMapping("/newActor")
     public String addActor(@ModelAttribute @Valid Actor actor, BindingResult bindingResult,
                            Model model,RedirectAttributes redirectAttributes){

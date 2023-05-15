@@ -26,14 +26,19 @@ public class ActorAssociationService {
         this.actorRepo = actorRepo;
     }
 
-    public List<ActorAssociation> getAllByFilmId(int filmId){
+    public List<ActorAssociation> getAllByFilmId(int filmId) {
         return actorAssociationRepo.findActorAssociationByFilm_Id(filmId);
     }
-    public boolean addActorToFilm(int filmId, int actorId, String role){
+
+    public boolean addActorToFilm(int filmId, int actorId, String role) {
         Film film = filmRepo.findById(filmId).orElse(null);
         Actor actor = actorRepo.findById(actorId).orElse(null);
-        if (film == null || actor == null) return false;
-        if (film.getActorAssociations().stream().anyMatch(x -> x.getActor().getId() == actorId)) return false;
+        if (film == null || actor == null) {
+            return false;
+        }
+        if (film.getActorAssociations().stream().anyMatch(x -> x.getActor().getId() == actorId)) {
+            return false;
+        }
         ActorAssociation actorAssociation = new ActorAssociation();
         actorAssociation.setActor(actor);
         actorAssociation.setFilm(film);
@@ -41,9 +46,12 @@ public class ActorAssociationService {
         actorAssociationRepo.save(actorAssociation);
         return true;
     }
-    public boolean deleteActorFromFilm(int filmId, int actorId){
+
+    public boolean deleteActorFromFilm(int filmId, int actorId) {
         ActorAssociation actorAssociation = actorAssociationRepo.findByFilm_IdAndActor_Id(filmId, actorId);
-        if(actorAssociation == null)return false;
+        if (actorAssociation == null) {
+            return false;
+        }
         actorAssociationRepo.delete(actorAssociation);
         return true;
     }

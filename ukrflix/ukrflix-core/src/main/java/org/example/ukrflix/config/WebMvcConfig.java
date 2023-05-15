@@ -30,23 +30,15 @@ import java.util.Locale;
 @Configuration
 @ComponentScan(basePackages = {"org.example.ukrflix"})
 public class WebMvcConfig implements WebMvcConfigurer {
-/*    @Bean
-    public InternalResourceViewResolver resolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        //resolver.setViewClass(JstlView.class);
+    @Bean
+    public ITemplateResolver templateResolver() {
+        SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".html");
+        resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setCharacterEncoding("UTF-8");
         return resolver;
-    }*/
-   @Bean
-   public ITemplateResolver templateResolver() {
-       SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
-       resolver.setPrefix("/WEB-INF/views/");
-       resolver.setSuffix(".html");
-       resolver.setTemplateMode(TemplateMode.HTML);
-       resolver.setCharacterEncoding("UTF-8");
-       return resolver;
-   }
+    }
 
     @Bean
     public SpringTemplateEngine templateEngine() {
@@ -56,17 +48,19 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public ThymeleafViewResolver viewResolver() {
+    public ThymeleafViewResolver viewResolver(ThymeleafHelper thymeleafHelper) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
         resolver.setCharacterEncoding("UTF-8");
-        resolver.addStaticVariable("readJsonFile", ThymeleafHelper.getInstance());
+        resolver.addStaticVariable("readJsonFile", thymeleafHelper);
         return resolver;
     }
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         //registry.addViewController("/").setViewName("index");
     }
+
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource source = new ResourceBundleMessageSource();
@@ -74,12 +68,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
         source.setDefaultEncoding("UTF-8");
         return source;
     }
+
     @Override
     public Validator getValidator() {
         LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();
         validator.setValidationMessageSource(messageSource());
         return validator;
     }
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
@@ -89,9 +85,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 
     @Bean
-    public RestTemplate getRestTemplate(){
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
+
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
@@ -118,6 +115,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         bean.setValidationMessageSource(messageSource);
         return bean;
     }
+
     @Autowired
     private EntityManagerFactory entityManagerFactory;
 

@@ -1,12 +1,21 @@
 package org.example.ukrflix.model;
 
-
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -14,25 +23,35 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @NotBlank
     private String login;
+
     @NotBlank
     private String password;
+
     @NotBlank
-    @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$",message = "{label.warning.name}")
+    @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$", message = "{label.warning.name}")
     private String firstname;
+
     @NotBlank
-    @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$",message = "{label.warning.name}")
+    @Pattern(regexp = "^[A-Z|А-я]{1}[a-z|а-я]{1,10}$", message = "{label.warning.name}")
     private String lastname;
+
     private String email;
-    @Pattern(regexp = "^\\+\\d{6,10}$",message = "{label.warning.incorrectPhone}")
+
+    @Pattern(regexp = "^\\+\\d{6,10}$", message = "{label.warning.incorrectPhone}")
     private String phone;
+
     @NotNull
-    private Date birthday;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate birthday;
+
     private int account;
-    //@OneToMany(mappedBy = "user",fetch = FetchType.EAGER,cascade = {CascadeType.DETACH,CascadeType.REFRESH})
+
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Purchase> purchases;
+
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinTable(name = "purchase",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -95,12 +114,12 @@ public class User {
         this.phone = phone_num;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date date) {
-        this.birthday = date;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     public int getAccount() {

@@ -1,8 +1,5 @@
 package org.example.ukrflix.repo;
 
-
-
-
 import org.example.ukrflix.model.ActorAssociation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

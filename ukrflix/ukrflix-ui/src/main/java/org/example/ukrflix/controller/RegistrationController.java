@@ -11,7 +11,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -40,12 +39,10 @@ public class RegistrationController {
             return "registration";
         }
         if (bindingResult.hasErrors()) {
-            System.out.println("ok");
             return "registration";
         }
         if (!userDTO.getPassword().equals(userDTO.getPasswordRepeat())) {
             bindingResult.rejectValue("passwordRepeat", "label.warning.passwordRepeat");
-            System.out.println("blaf");
             return "registration";
         }
         User user = userDTO.toUser();
@@ -54,5 +51,4 @@ public class RegistrationController {
         LOGGER.info("redirect /login");
         return "redirect:/login";
     }
-
 }

@@ -47,7 +47,7 @@ public class FilmService {
         try {
             description = mapper.writeValueAsString(data);
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            LOGGER.error("we have error", e);
         }
         film.setDescription(description);
         filmRepo.save(film);
@@ -55,29 +55,10 @@ public class FilmService {
     }
 
     public Page<Film> getAll(int page, int size) {
-        if (page < 1) page = 1;
+        if (page < 1) {
+            page = 1;
+        }
         page--;
         return filmRepo.findAll(PageRequest.of(page, size));
     }
-
-/*    public boolean deleteActorFromFilm(int filmId, int actorId) {
-        Film film = filmRepo.findById(filmId).orElse(null);
-        if (film == null) return false;
-        System.out.println(film);
-        if (film.getActorAssociations().stream().noneMatch(x -> x.getActor().getId() == actorId)) return false;
-        film.getActorAssociations().removeIf(x -> x.getActor().getId() == actorId);
-        filmRepo.save(film);
-        System.out.println(film);
-        return true;
-    }*/
-
-/*    public boolean addActorFromFilm(int filmId, int actorId) {
-        Film film = filmRepo.findById(filmId).orElse(null);
-        Actor actor = actorRepo.findById(actorId).orElse(null);
-        if (film == null || actor == null) return false;
-        if (film.getActors().stream().anyMatch(x -> x.getId() == actorId)) return false;
-        film.getActors().add(actor);
-        filmRepo.save(film);
-        return true;
-    }*/
 }

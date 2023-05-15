@@ -22,9 +22,8 @@ CREATE TABLE film(
   	price INT DEFAULT 0,
       img_src VARCHAR(255) NOT NULL,
       yt_src VARCHAR(255) NOT NULL,
-      email VARCHAR(30),
 	release_date DATE,
-	description VARCHAR(255),
+	description TEXT,
 	PRIMARY KEY (id)	
 );
 

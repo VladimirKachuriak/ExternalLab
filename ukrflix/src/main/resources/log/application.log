@@ -26476,3 +26476,33 @@ java.net.URLClassLoader@3581c5f3
 2023-05-13 20:41:40 INFO  [http-nio-8080-exec-3]: - entered /newActor
 2023-05-13 20:42:08 INFO  [http-nio-8080-exec-4]: - get all actors
 2023-05-13 20:42:17 INFO  [http-nio-8080-exec-7]: - Enter /catalog
+2023-05-15 11:10:12 INFO  [http-nio-8080-exec-2]: - Redirect from / to the /catalog path
+2023-05-15 11:10:12 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-05-15 11:32:07 INFO  [http-nio-8080-exec-2]: - get all actors
+2023-05-15 11:32:22 INFO  [http-nio-8080-exec-3]: - entered /newActor
+2023-05-15 11:32:44 INFO  [http-nio-8080-exec-6]: - get all actors
+2023-05-15 11:40:23 INFO  [http-nio-8080-exec-3]: - Enter /catalog
+2023-05-15 11:49:15 INFO  [http-nio-8080-exec-2]: - entered /newActor
+2023-05-15 11:59:43 INFO  [http-nio-8080-exec-2]: - Entered /new_film
+2023-05-15 12:01:23 INFO  [http-nio-8080-exec-1]: - Entered /new_film
+2023-05-15 12:01:27 INFO  [http-nio-8080-exec-3]: - entered /newActor
+2023-05-15 12:11:10 INFO  [http-nio-8080-exec-2]: - entered /newActor
+2023-05-15 12:15:14 INFO  [http-nio-8080-exec-1]: - entered /newActor
+2023-05-15 12:19:46 ERROR [http-nio-8080-exec-1]: - Column 'birthday' cannot be null
+2023-05-15 12:22:58 ERROR [http-nio-8080-exec-1]: - Column 'birthday' cannot be null
+2023-05-15 17:47:31 INFO  [http-nio-8080-exec-1]: - get all actors
+2023-05-15 17:47:34 INFO  [http-nio-8080-exec-2]: - entered /newActor
+2023-05-15 17:47:37 INFO  [http-nio-8080-exec-4]: - Entered /new_film
+2023-05-15 17:47:38 INFO  [http-nio-8080-exec-5]: - entered /newActor
+2023-05-15 17:47:46 ERROR [http-nio-8080-exec-3]: - Column 'birthday' cannot be null
+2023-05-15 17:49:08 ERROR [http-nio-8080-exec-7]: - Column 'birthday' cannot be null
+2023-05-15 17:52:35 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-05-15 17:55:58 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-05-15 17:57:39 INFO  [http-nio-8080-exec-1]: - get all actors
+2023-05-15 17:57:40 INFO  [http-nio-8080-exec-2]: - entered /newActor
+2023-05-15 17:57:49 INFO  [http-nio-8080-exec-4]: - Enter /catalog
+2023-05-15 18:06:33 INFO  [http-nio-8080-exec-5]: - Enter /catalog
+2023-05-15 19:36:09 INFO  [http-nio-8080-exec-2]: - Enter /catalog
+2023-05-15 19:37:34 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-05-15 19:38:38 INFO  [http-nio-8080-exec-1]: - Enter /catalog
+2023-05-15 19:54:26 INFO  [http-nio-8080-exec-1]: - Enter /catalog

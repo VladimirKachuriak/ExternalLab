@@ -1,6 +1,5 @@
 package org.example.ukrflix.repo;
 
-
 import org.example.ukrflix.model.Actor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

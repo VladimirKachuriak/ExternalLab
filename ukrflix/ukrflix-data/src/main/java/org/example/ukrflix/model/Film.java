@@ -1,42 +1,52 @@
 package org.example.ukrflix.model;
 
-
-
 import org.hibernate.validator.constraints.NotBlank;
-import javax.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
-
 
 @Entity
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @NotBlank
     private String name;
+
     @NotNull
     @Column(name = "release_date")
-    private Date releaseDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate releaseDate;
+
     private int price;
+
     @Column(name = "img_src")
+
     private String imgSrc;
+
     @Column(name = "yt_src")
     private String ytSrc;
+
+    @Column(columnDefinition = "TEXT")
     private String description;
-    //@OneToMany(mappedBy = "film", cascade = {CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE})
+
     @OneToMany(mappedBy = "film")
     private Set<Purchase> purchases;
-    /*@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "actorassociation",
-            joinColumns = @JoinColumn(name = "film_id"),
-            inverseJoinColumns = @JoinColumn(name = "actor_id"))
-    private List<Actor> actors;*/
+
     @OneToMany(mappedBy = "film", fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.REMOVE})
     private List<ActorAssociation> actorAssociations;
-
 
 
     public int getId() {
@@ -55,12 +65,12 @@ public class Film {
         this.name = name;
     }
 
-    public Date getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date release_date) {
-        this.releaseDate = release_date;
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public int getPrice() {

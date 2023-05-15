@@ -46,6 +46,8 @@
             <div class="mb-3">
                 <label for="release_date" class="form-label" th:text="#{label.birthday}"></label>
                 <input type="date" class="form-control" id="release_date" th:field="*{birthday}">
+                <div class="alert alert-warning" role="alert"
+                     th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></div>
             </div>
             <div class="mb-3">
                 <div class="form-group">

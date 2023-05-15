@@ -62,7 +62,6 @@ public class FilmController {
     @GetMapping("/{id}")
     public String filmDescription(@PathVariable int id, @RequestParam(name = "search", required = false) String search, Model model) throws JsonProcessingException {
         Film film = filmService.findById(id);
-        //ActorAssociation actorAssociation = actorAssociationService.getAllByFilmId(id);
         model.addAttribute("film", film);
         model.addAttribute("actors", actorService.getActorsNotInFilm(film.getId(), search));
         return "filmDescription";
@@ -72,9 +71,6 @@ public class FilmController {
     public String makePurchase(@PathVariable("id") int filmId, Model model, HttpSession session, RedirectAttributes redirectAttributes) {
         String login = (String) session.getAttribute("login");
         boolean result = purchaseService.makePurchase(login, filmId);
-        /*if(login==null){
-            redirectAttributes.
-        }*/
         if (result) {
             redirectAttributes.addFlashAttribute("message", "label.message.buyMovieSuccess");
             LOGGER.info("Film " + filmId + " was added by the user login = " + login);
@@ -110,9 +106,6 @@ public class FilmController {
             redirectAttributes.addFlashAttribute("message", "label.message.fail");
             LOGGER.info("problem");
         }
-        /*UriComponentsBuilder builder = UriComponentsBuilder.fromPath("/film/"+filmId)
-                .queryParam("search", se);
-        String url = builder.toUriString();*/
         return "redirect:/film/" + filmId;
     }
 }

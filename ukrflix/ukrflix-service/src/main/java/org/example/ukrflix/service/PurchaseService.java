@@ -1,6 +1,5 @@
 package org.example.ukrflix.service;
 
-
 import org.apache.log4j.Logger;
 
 import org.example.ukrflix.model.Film;
@@ -32,7 +31,7 @@ public class PurchaseService {
         if (purchaseRepo.findByFilmAndUser(film, user) != null) {
             return false;
         }
-        if(film.getPrice()>user.getAccount()){
+        if (film.getPrice() > user.getAccount()) {
             return false;
         }
         Purchase purchase = new Purchase(user, film);
