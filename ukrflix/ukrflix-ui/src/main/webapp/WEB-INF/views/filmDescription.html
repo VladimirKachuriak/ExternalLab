@@ -21,13 +21,14 @@
     </div>
     <div class="card" style="width: 18rem;">
         <div class="card" style="width: 18rem;">
-            <img th:src="${film.img_src}" class="card-img-top" alt="...">
+            <img th:src="${film.imgSrc}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title" th:text="${film.name}">Card title</h5>
-                <h1 class="card-text" th:text="${film.release_date}">Card title</h1>
+                <h1 class="card-text" th:text="${film.releaseDate}">Card title</h1>
                 <h1 class="card-text" th:text="#{label.price}+' = ' + ${film.price}">Card title</h1>
                 <h1 class="card-text" th:text="${readJsonFile.readJsonFile(film.description, #locale)}"></h1>
-                <a th:href="@{/film/{id}/watch(id=${film.id})}" class="btn btn-primary" th:text="#{label.button.watchFilm}">watch film</a>
+                <a th:href="@{/film/{id}/watch(id=${film.id})}" class="btn btn-primary"
+                   th:text="#{label.button.watchFilm}">watch film</a>
                 <!--<a th:href="@{/film/{id}/buy(id=${film.id})}" class="btn btn-primary">buy</a>-->
                 <!--<form th:action="@{/film/{id}/buy(id=${film.id})}" method="POST">
                     <input class="btn btn-primary btn-lg" type="submit" value="Buy"/>
@@ -36,23 +37,53 @@
         </div>
     </div>
     <p class="font-monospace fs-1 fw-bold m-2" th:text="#{label.cast}+':'">This is in monospace</p>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div th:each="actor:${film.actors}">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h1 class="card-text" th:text="${actor.firstname}">Card title</h1>
-                        <h1 class="card-text" th:text="${actor.lastname}">Card title</h1>
-                        <h5 class="card-text" th:text="#{label.birthday}+ ' = ' + ${actor.birthday}">Card title</h5>
-                        <!--<a th:href="@{/film/{id}(id=${film.id})}" class="btn btn-primary">watch film</a>
-                        <a th:href="@{/film/{id}/buy(id=${film.id})}" class="btn btn-primary">buy</a>-->
-                        <form th:action="@{/film/{id}/deleteActor(id=${film.id})}" th:method="POST">
-                            <input type="hidden" th:name="actorId" th:value="${actor.id}">
-                            <input class="btn btn-primary btn-lg" type="submit" th:value="#{label.button.delete}"/>
-                        </form>
-                    </div>
+    <!--<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div th:each="actorAssociations:${film.actorAssociations}">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h1 class="card-text" th:text="${actorAssociations.actor.firstname}">Card title</h1>
+                    <h1 class="card-text" th:text="${actorAssociations.actor.lastname}">Card title</h1>
+                    <h5 class="card-text" th:text="#{label.birthday}+ ' = ' + ${actorAssociations.actor.birthday}">Card
+                        title</h5>
+                    &lt;!&ndash;<a th:href="@{/film/{id}(id=${film.id})}" class="btn btn-primary">watch film</a>
+                    <a th:href="@{/film/{id}/buy(id=${film.id})}" class="btn btn-primary">buy</a>&ndash;&gt;
+                    <form th:action="@{/film/{id}/deleteActor(id=${film.id})}" th:method="POST">
+                        <input type="hidden" th:name="actorId" th:value="${actorAssociations.actor.id}">
+                        <input class="btn btn-primary btn-lg" type="submit" th:value="#{label.button.delete}"/>
+                    </form>
                 </div>
+            </div>
         </div>
-    </div>
+    </div>-->
+    <table th:if="${film.actorAssociations != null }" class="table table-striped">
+        <thead>
+        <tr>
+            <th th:text="#{label.firstname}">#</th>
+            <th th:text="#{label.lastname}">#</th>
+            <th th:text="#{label.birthday}">#</th>
+            <th th:text="#{label.role}">#</th>
+            <th th:text="#{label.button.delete}">#</th>
+            <th th:text="#{label.button.info}">#</th>
+        </tr>
+        </thead>
+        <tbody th:each="actorAssociations:${film.actorAssociations}">
+            <tr>
+                <td th:text="${actorAssociations.actor.firstname}">firstname</td>
+                <td th:text="${actorAssociations.actor.lastname}">firstname</td>
+                <td th:text="${actorAssociations.actor.birthday}">firstname</td>
+                <td th:text="${actorAssociations.role}">firstname</td>
+                <td>
+                    <form th:action="@{/film/{id}/deleteActor(id=${film.id})}" th:method="POST">
+                        <input type="hidden" th:name="actorId" th:value="${actorAssociations.actor.id}">
+                        <input class="btn btn-primary btn-lg" type="submit" th:value="#{label.button.delete}"/>
+                    </form>
+                </td>
+                <td>
+                    <a th:href="@{/actor/{id}(id=${actorAssociations.actor.id})}" class="btn btn-primary" th:text="#{label.button.info}">Info</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <br/>
     <br/>
     <form th:action="@{/film/{id}(id=${film.id})}" method="GET">
@@ -74,6 +105,8 @@
                     <a th:href="@{/film/{id}/buy(id=${film.id})}" class="btn btn-primary">buy</a>-->
                     <form th:action="@{/film/{id}/addActor(id=${film.id})}" th:method="POST">
                         <input type="hidden" th:name="actorId" th:value="${actor.id}">
+                        <input type="text" class="form-control" th:placeholder="#{label.role}" name="role"
+                               aria-describedby="basic-addon1">
                         <input class="btn btn-primary btn-lg" type="submit" th:value="#{label.button.add}"/>
                     </form>
                 </div>

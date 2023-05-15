@@ -1,0 +1,58 @@
+<div th:fragment="navBar" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ukrflix</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/registration}" th:text="#{label.registration}">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/catalog}" th:text="#{label.catalog}">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/user/topUp}" th:text="#{label.account}">topUp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/user/purchases}" th:text="#{label.purchases}">purchases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/user/profile}" th:text="#{label.profile}">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/film/newFilm}" th:text="#{label.addFilm}">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/actor/newActor}" th:text="#{label.addActor}">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/actor}" th:text="#{label.actors}">profile</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                th:text="#{label.language.change}" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" th:href="@{'?lang=en'}"
+                                   th:text="#{label.language.eu}">Action</a></li>
+                            <li><a class="dropdown-item" th:href="@{'?lang=uk'}"
+                                   th:text="#{label.language.uk}">Action</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <form class="d-flex" th:action="@{/login}" th:method="GET">
+                <button class="btn btn-outline-success my-2 my-sm-0"  th:text="#{label.button.login}" type="submit">Login
+                </button>
+            </form>
+        </div>
+    </nav>
+</div>

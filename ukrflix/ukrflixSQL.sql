@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS ukrflix;
 CREATE SCHEMA ukrflix DEFAULT CHARACTER SET utf8;
 SET NAMES UTF8;
 USE ukrflix;
-CREATE TABLE User(
+CREATE TABLE user(
 	id INT NOT NULL  AUTO_INCREMENT,
 	login varchar(20) NOT NULL,
 	password varchar(30) NOT NULL,
@@ -16,19 +16,18 @@ CREATE TABLE User(
 	UNIQUE (login)
 );
 
-CREATE TABLE Film(
+CREATE TABLE film(
 	id INT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(30) NOT NULL,
   	price INT DEFAULT 0,
       img_src VARCHAR(255) NOT NULL,
       yt_src VARCHAR(255) NOT NULL,
-      email VARCHAR(30),
 	release_date DATE,
-	description VARCHAR(255),
+	description TEXT,
 	PRIMARY KEY (id)	
 );
 
-CREATE TABLE Purchase (
+CREATE TABLE purchase (
 	id int NOT NULL AUTO_INCREMENT,
   	film_id INT,
   	user_id INT,
@@ -39,15 +38,23 @@ CREATE TABLE Purchase (
 );
 
 CREATE TABLE actor (
-  id int NOT NULL AUTO_INCREMENT,
-  birthday date NOT NULL,
-  firstname varchar(255) NOT NULL,
-  lastname varchar(255) NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
+  birthday DATE NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
+);
+
+CREATE TABLE actor_images
+(
+    actor_id INT,
+    actorImages VARCHAR(255) null,
+    FOREIGN KEY (actor_id) REFERENCES actor(id)
 );
 
 CREATE TABLE actorassociation (
   id int NOT NULL AUTO_INCREMENT,
+  role VARCHAR(255),
   actor_id int DEFAULT NULL,
   film_id int DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -60,7 +67,7 @@ CREATE TABLE actorassociation (
 
 
 INSERT INTO ukrflix.user (login, password, firstname, lastname, email, birthday, phone)
-VALUES ('user', '1234', 'a', 'b', null, '2023-03-10', null);
+VALUES ('user', '1234', 'Artem', 'Novikov', 'email@email', '2023-03-10', '+1234567');
 
 INSERT INTO film (name, release_date, price, img_src, yt_src, description)
 VALUES ('Avatar', '2021-03-04', '22',
@@ -91,6 +98,23 @@ INSERT INTO actor (firstname, lastname, birthday) VALUES ('Brad', 'Pitt', '1963-
 INSERT INTO actor (firstname, lastname, birthday) VALUES ('Angelina', 'jolie', '1975-7-4');
 INSERT INTO actor (firstname, lastname, birthday) VALUES ('Jennifer', 'Aniston', '1969-02-11');
 
-INSERT INTO actorassociation (actor_id, film_id) VALUES ('1', 1);
-INSERT INTO actorassociation (actor_id, film_id) VALUES ('1', 2);
-INSERT INTO actorassociation (actor_id, film_id) VALUES ('1', 3);
+INSERT INTO actorassociation (role, actor_id, film_id) VALUES ('Martin', '1', 1);
+INSERT INTO actorassociation (role, actor_id, film_id) VALUES ('Sully', '1', 2);
+INSERT INTO actorassociation (role, actor_id, film_id) VALUES ('Mike', '1', 3);
+
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('1', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413838550_e148a808b5.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('1', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413838555_2a42722a84.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('1', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413838559_a440fc0400.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('1', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413838564_3d95d33ef3.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('2', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413713183_7b67886d4a.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('2', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413713167_2f0fdbfa87.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('2', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413713173_360594d873.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('2', 'https://ex-fs.net/uploads/posts/2014-10/thumbs/1413713194_7c1f4f907c.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('3', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410012046_75850fa883.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('3', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410012052_16c589349a.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('3', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410012041_3b82d8f219.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('3', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410012025_76325c9994.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('4', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410005773_219a3268e2.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('4', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410005768_c922be14f8.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('4', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410005779_929fe62b50.jpg');
+INSERT INTO actor_images (actor_id, actorImages) VALUES ('4', 'https://ex-fs.net/uploads/posts/2014-09/thumbs/1410005773_219a3268e2.jpg');
